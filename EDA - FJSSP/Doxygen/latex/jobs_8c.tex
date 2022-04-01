@@ -1,0 +1,59 @@
+\hypertarget{jobs_8c}{}\doxysection{C\+:/\+Users/\+Rikito\+Gaymer/\+Desktop/\+EDA-\/-\/\+FJSSP-\/master/\+EDA -\/ FJSSP/jobs.c File Reference}
+\label{jobs_8c}\index{C:/Users/RikitoGaymer/Desktop/EDA-\/-\/FJSSP-\/master/EDA -\/ FJSSP/jobs.c@{C:/Users/RikitoGaymer/Desktop/EDA-\/-\/FJSSP-\/master/EDA -\/ FJSSP/jobs.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{jobs_8c_a443fc89aae2ac8f2b75e275bc7b39964}{Create\+Job}} (int id)
+\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{jobs_8c_a39b2420f86e33644c58e7390c037cf43}{Insert\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$\mbox{\hyperlink{header_8h_a084c104399541e8d2c9efedd3246a91f}{jobs\+Header}}, \mbox{\hyperlink{struct_job}{Job}} $\ast$new\+Job)
+\item 
+void \mbox{\hyperlink{jobs_8c_a67f2f217c9725d4f55eed8f106fc35c9}{Show\+Jobs\+List}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$\mbox{\hyperlink{header_8h_a084c104399541e8d2c9efedd3246a91f}{jobs\+Header}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jobs_8c_a443fc89aae2ac8f2b75e275bc7b39964}\label{jobs_8c_a443fc89aae2ac8f2b75e275bc7b39964}} 
+\index{jobs.c@{jobs.c}!CreateJob@{CreateJob}}
+\index{CreateJob@{CreateJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{CreateJob()}{CreateJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Create\+Job (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Cria um job 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em operations} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+Job} & //\+Retorna o job aqui criado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{jobs_8c_a39b2420f86e33644c58e7390c037cf43}\label{jobs_8c_a39b2420f86e33644c58e7390c037cf43}} 
+\index{jobs.c@{jobs.c}!InsertJob@{InsertJob}}
+\index{InsertJob@{InsertJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{InsertJob()}{InsertJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Insert\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{jobs\+Header,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{new\+Job }\end{DoxyParamCaption})}
+
+Insere um job 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em jobs\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Job} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em jobs\+Header} & //\+Retorna o header job \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{jobs_8c_a67f2f217c9725d4f55eed8f106fc35c9}\label{jobs_8c_a67f2f217c9725d4f55eed8f106fc35c9}} 
+\index{jobs.c@{jobs.c}!ShowJobsList@{ShowJobsList}}
+\index{ShowJobsList@{ShowJobsList}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{ShowJobsList()}{ShowJobsList()}}
+{\footnotesize\ttfamily void Show\+Jobs\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{jobs\+Header }\end{DoxyParamCaption})}
+
+Mostra a lista de jobs e operações e máquinas 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em jobs\+Header} & \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,207 @@
+\hypertarget{operations_8c}{}\doxysection{C\+:/\+Users/\+Rikito\+Gaymer/\+Desktop/\+EDA-\/-\/\+FJSSP-\/master/\+EDA -\/ FJSSP/operations.c File Reference}
+\label{operations_8c}\index{C:/Users/RikitoGaymer/Desktop/EDA-\/-\/FJSSP-\/master/EDA -\/ FJSSP/operations.c@{C:/Users/RikitoGaymer/Desktop/EDA-\/-\/FJSSP-\/master/EDA -\/ FJSSP/operations.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{operations_8c_a099ae54476a15f053d82014580fd2448}{Operation\+Check}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}}, int id)
+\item 
+\mbox{\hyperlink{struct_operation}{Operation}} $\ast$ \mbox{\hyperlink{operations_8c_a1b2bde91f15be34f4c7716dc122f8a9b}{Create\+Operation}} (int id)
+\item 
+\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ \mbox{\hyperlink{operations_8c_a26d58d5097e4818ee32e0e0749170c7e}{Create\+Operation\+List\+Node}} (\mbox{\hyperlink{struct_operation}{Operation}} $\ast$new\+Operation)
+\item 
+\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ \mbox{\hyperlink{operations_8c_a8ebd860b27aa41c740c8ba283d7df73e}{Insert\+Operation\+List}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}}, \mbox{\hyperlink{struct_operation}{Operation}} $\ast$new\+Operation)
+\item 
+\mbox{\hyperlink{struct_operation}{Operation}} $\ast$ \mbox{\hyperlink{operations_8c_ab94b8c70cbba219b980fbd27cc856db1}{Operation\+Search}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}}, int id)
+\item 
+\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ \mbox{\hyperlink{operations_8c_ac82048fe1ea1a60fabc1290aac6a29af}{Remove\+Operation}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}}, int id)
+\item 
+\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ \mbox{\hyperlink{operations_8c_a7bdf1ac15b706010b2a356642840ebdd}{Change\+Operation}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}}, int Operationid, int Machineid, int change\+Time)
+\item 
+int \mbox{\hyperlink{operations_8c_a57583f0c347bfad8aff29abc1f985016}{Min\+Operation\+Time}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}})
+\item 
+int \mbox{\hyperlink{operations_8c_a6d8229b15f0e8885cb624f1fd1dff858}{Max\+Operation\+Time}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}})
+\item 
+int \mbox{\hyperlink{operations_8c_afa2a810bef846984bb2682f559a8aae4}{Count\+Operation\+Machines}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}})
+\item 
+float \mbox{\hyperlink{operations_8c_a32755342d89cc60228faaaf3f0d13f6d}{Average\+Operation\+Time}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}})
+\item 
+void \mbox{\hyperlink{operations_8c_a94cabd4759da4d3d0086176027457296}{Show\+Operation\+List}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$\mbox{\hyperlink{header_8h_a3dfb25ded3ba327bd16c7d568e53838d}{operations\+Header}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{operations_8c_a32755342d89cc60228faaaf3f0d13f6d}\label{operations_8c_a32755342d89cc60228faaaf3f0d13f6d}} 
+\index{operations.c@{operations.c}!AverageOperationTime@{AverageOperationTime}}
+\index{AverageOperationTime@{AverageOperationTime}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{AverageOperationTime()}{AverageOperationTime()}}
+{\footnotesize\ttfamily float Average\+Operation\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header }\end{DoxyParamCaption})}
+
+Tempo médio da operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em average} & //\+Retorna o tempo médio do tempo das máquinas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a7bdf1ac15b706010b2a356642840ebdd}\label{operations_8c_a7bdf1ac15b706010b2a356642840ebdd}} 
+\index{operations.c@{operations.c}!ChangeOperation@{ChangeOperation}}
+\index{ChangeOperation@{ChangeOperation}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{ChangeOperation()}{ChangeOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ Change\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header,  }\item[{int}]{Operationid,  }\item[{int}]{Machineid,  }\item[{int}]{change\+Time }\end{DoxyParamCaption})}
+
+Alterar operações 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em change\+Time} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em Machineid} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em operations\+Header} & //\+Retorna o header daa lista de operações alterada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_afa2a810bef846984bb2682f559a8aae4}\label{operations_8c_afa2a810bef846984bb2682f559a8aae4}} 
+\index{operations.c@{operations.c}!CountOperationMachines@{CountOperationMachines}}
+\index{CountOperationMachines@{CountOperationMachines}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{CountOperationMachines()}{CountOperationMachines()}}
+{\footnotesize\ttfamily int Count\+Operation\+Machines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header }\end{DoxyParamCaption})}
+
+Contador de máquinas para cada operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em operations\+Header} & //\+Retorna quantas máquinas tem todas as operações \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a1b2bde91f15be34f4c7716dc122f8a9b}\label{operations_8c_a1b2bde91f15be34f4c7716dc122f8a9b}} 
+\index{operations.c@{operations.c}!CreateOperation@{CreateOperation}}
+\index{CreateOperation@{CreateOperation}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{CreateOperation()}{CreateOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} $\ast$ Create\+Operation (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Cria uma operacao 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em machines\+Header} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+Operation} & //\+Retorna a máquina aqui criada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a26d58d5097e4818ee32e0e0749170c7e}\label{operations_8c_a26d58d5097e4818ee32e0e0749170c7e}} 
+\index{operations.c@{operations.c}!CreateOperationListNode@{CreateOperationListNode}}
+\index{CreateOperationListNode@{CreateOperationListNode}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{CreateOperationListNode()}{CreateOperationListNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ Create\+Operation\+List\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{new\+Operation }\end{DoxyParamCaption})}
+
+Cria novo nó para a lista de Operações 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Operation} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+List} & para nó criado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a8ebd860b27aa41c740c8ba283d7df73e}\label{operations_8c_a8ebd860b27aa41c740c8ba283d7df73e}} 
+\index{operations.c@{operations.c}!InsertOperationList@{InsertOperationList}}
+\index{InsertOperationList@{InsertOperationList}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{InsertOperationList()}{InsertOperationList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ Insert\+Operation\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header,  }\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{new\+Operation }\end{DoxyParamCaption})}
+
+Insere uma operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Operation} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em operations\+Header} & //\+Retorna a máquina aqui criada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a6d8229b15f0e8885cb624f1fd1dff858}\label{operations_8c_a6d8229b15f0e8885cb624f1fd1dff858}} 
+\index{operations.c@{operations.c}!MaxOperationTime@{MaxOperationTime}}
+\index{MaxOperationTime@{MaxOperationTime}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{MaxOperationTime()}{MaxOperationTime()}}
+{\footnotesize\ttfamily int Max\+Operation\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header }\end{DoxyParamCaption})}
+
+Tempo máximo da operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em operations\+Header} & //\+Retorna a soma do tempos máximos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a57583f0c347bfad8aff29abc1f985016}\label{operations_8c_a57583f0c347bfad8aff29abc1f985016}} 
+\index{operations.c@{operations.c}!MinOperationTime@{MinOperationTime}}
+\index{MinOperationTime@{MinOperationTime}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{MinOperationTime()}{MinOperationTime()}}
+{\footnotesize\ttfamily int Min\+Operation\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header }\end{DoxyParamCaption})}
+
+Tempo mínimo da operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em operations\+Header} & //\+Retorna a soma do tempos minimos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a099ae54476a15f053d82014580fd2448}\label{operations_8c_a099ae54476a15f053d82014580fd2448}} 
+\index{operations.c@{operations.c}!OperationCheck@{OperationCheck}}
+\index{OperationCheck@{OperationCheck}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{OperationCheck()}{OperationCheck()}}
+{\footnotesize\ttfamily bool Operation\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Verifica se a operação existe 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em bool} & //\+Retorna se encontrou um jogo existente ou não \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_ab94b8c70cbba219b980fbd27cc856db1}\label{operations_8c_ab94b8c70cbba219b980fbd27cc856db1}} 
+\index{operations.c@{operations.c}!OperationSearch@{OperationSearch}}
+\index{OperationSearch@{OperationSearch}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{OperationSearch()}{OperationSearch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} $\ast$ Operation\+Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Procura a operação pretendida 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em aux} & //\+Retorna a operação que era procurada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_ac82048fe1ea1a60fabc1290aac6a29af}\label{operations_8c_ac82048fe1ea1a60fabc1290aac6a29af}} 
+\index{operations.c@{operations.c}!RemoveOperation@{RemoveOperation}}
+\index{RemoveOperation@{RemoveOperation}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{RemoveOperation()}{RemoveOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ Remove\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Remover a operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em operations\+Header} & //\+Retorna o header da lista de operações, mas com a operação já removida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_a94cabd4759da4d3d0086176027457296}\label{operations_8c_a94cabd4759da4d3d0086176027457296}} 
+\index{operations.c@{operations.c}!ShowOperationList@{ShowOperationList}}
+\index{ShowOperationList@{ShowOperationList}!operations.c@{operations.c}}
+\doxysubsubsection{\texorpdfstring{ShowOperationList()}{ShowOperationList()}}
+{\footnotesize\ttfamily void Show\+Operation\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations\+Header }\end{DoxyParamCaption})}
+
+Mostra a lista de operações e máquinas 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em operations\+Header} & \\
+\hline
+\end{DoxyParams}

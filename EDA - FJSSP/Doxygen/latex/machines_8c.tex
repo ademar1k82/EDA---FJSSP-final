@@ -1,0 +1,139 @@
+\hypertarget{machines_8c}{}\doxysection{C\+:/\+Users/\+Rikito\+Gaymer/\+Desktop/\+EDA-\/-\/\+FJSSP-\/master/\+EDA -\/ FJSSP/machines.c File Reference}
+\label{machines_8c}\index{C:/Users/RikitoGaymer/Desktop/EDA-\/-\/FJSSP-\/master/EDA -\/ FJSSP/machines.c@{C:/Users/RikitoGaymer/Desktop/EDA-\/-\/FJSSP-\/master/EDA -\/ FJSSP/machines.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{machines_8c_ac6cbd8f8f60c22a66716a24e49fac14a}{Machine\+Check}} (\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$\mbox{\hyperlink{header_8h_a1b827df88378f38fc0502fa5fc0c7214}{machines\+Header}}, int id)
+\item 
+\mbox{\hyperlink{struct_machine}{Machine}} $\ast$ \mbox{\hyperlink{machines_8c_a4ed42e241f3b333a13ec8470d7e3210b}{Create\+Machine}} (int id, int time)
+\item 
+\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$ \mbox{\hyperlink{machines_8c_abd18dc44a6f2fc0eaafbb8633ab385cd}{Create\+Machine\+List\+Node}} (\mbox{\hyperlink{struct_machine}{Machine}} $\ast$new\+Machine)
+\item 
+\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$ \mbox{\hyperlink{machines_8c_a9807f9bdeec1b824d57c0687fbc51981}{Insert\+Machines\+List}} (\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$\mbox{\hyperlink{header_8h_a1b827df88378f38fc0502fa5fc0c7214}{machines\+Header}}, \mbox{\hyperlink{struct_machine}{Machine}} $\ast$new\+Machine)
+\item 
+\mbox{\hyperlink{struct_machine}{Machine}} $\ast$ \mbox{\hyperlink{machines_8c_ab80502dc92514543952d2a198c90b665}{Machine\+Search}} (\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$\mbox{\hyperlink{header_8h_a1b827df88378f38fc0502fa5fc0c7214}{machines\+Header}}, int id)
+\item 
+int \mbox{\hyperlink{machines_8c_a7941b7b557a8a43acce219cdf994fe7a}{Min\+Machine\+Time}} (\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$\mbox{\hyperlink{header_8h_a1b827df88378f38fc0502fa5fc0c7214}{machines\+Header}})
+\item 
+int \mbox{\hyperlink{machines_8c_a8590a0da47b3179f730dc31b4bc5e329}{Max\+Machine\+Time}} (\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$\mbox{\hyperlink{header_8h_a1b827df88378f38fc0502fa5fc0c7214}{machines\+Header}})
+\item 
+void \mbox{\hyperlink{machines_8c_a317fceb69a44838806f918e387e7ad9c}{Show\+Machine\+List}} (\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$\mbox{\hyperlink{header_8h_a1b827df88378f38fc0502fa5fc0c7214}{machines\+Header}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{machines_8c_a4ed42e241f3b333a13ec8470d7e3210b}\label{machines_8c_a4ed42e241f3b333a13ec8470d7e3210b}} 
+\index{machines.c@{machines.c}!CreateMachine@{CreateMachine}}
+\index{CreateMachine@{CreateMachine}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{CreateMachine()}{CreateMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine}{Machine}} $\ast$ Create\+Machine (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+Cria uma máquina 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em time} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+Machine} & //\+Retorna a máquina aqui criada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_abd18dc44a6f2fc0eaafbb8633ab385cd}\label{machines_8c_abd18dc44a6f2fc0eaafbb8633ab385cd}} 
+\index{machines.c@{machines.c}!CreateMachineListNode@{CreateMachineListNode}}
+\index{CreateMachineListNode@{CreateMachineListNode}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{CreateMachineListNode()}{CreateMachineListNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$ Create\+Machine\+List\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine}{Machine}} $\ast$}]{new\+Machine }\end{DoxyParamCaption})}
+
+Cria novo nó para a lista de Maquinas 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Machine} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+List} & //\+Retorna uma nova lista para nó criado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_a9807f9bdeec1b824d57c0687fbc51981}\label{machines_8c_a9807f9bdeec1b824d57c0687fbc51981}} 
+\index{machines.c@{machines.c}!InsertMachinesList@{InsertMachinesList}}
+\index{InsertMachinesList@{InsertMachinesList}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{InsertMachinesList()}{InsertMachinesList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$ Insert\+Machines\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$}]{machines\+Header,  }\item[{\mbox{\hyperlink{struct_machine}{Machine}} $\ast$}]{new\+Machine }\end{DoxyParamCaption})}
+
+Insere uma máquina 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em machines\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Machine} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em machines\+Header} & //\+Retorna o header da lista de máquinas com a nova máquina inserida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_ac6cbd8f8f60c22a66716a24e49fac14a}\label{machines_8c_ac6cbd8f8f60c22a66716a24e49fac14a}} 
+\index{machines.c@{machines.c}!MachineCheck@{MachineCheck}}
+\index{MachineCheck@{MachineCheck}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{MachineCheck()}{MachineCheck()}}
+{\footnotesize\ttfamily bool Machine\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$}]{machines\+Header,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Verifica se a maquina existe 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em maquinas\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em bool} & //\+Retorna se encontrou um jogo existente ou não \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_ab80502dc92514543952d2a198c90b665}\label{machines_8c_ab80502dc92514543952d2a198c90b665}} 
+\index{machines.c@{machines.c}!MachineSearch@{MachineSearch}}
+\index{MachineSearch@{MachineSearch}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{MachineSearch()}{MachineSearch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine}{Machine}} $\ast$ Machine\+Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$}]{machines\+Header,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+Procura a máquina pretendida 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em machines\+Header} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em new\+Machine} & //\+Retorna a cópia de uma nova máquina que estava a procura \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_a8590a0da47b3179f730dc31b4bc5e329}\label{machines_8c_a8590a0da47b3179f730dc31b4bc5e329}} 
+\index{machines.c@{machines.c}!MaxMachineTime@{MaxMachineTime}}
+\index{MaxMachineTime@{MaxMachineTime}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{MaxMachineTime()}{MaxMachineTime()}}
+{\footnotesize\ttfamily int Max\+Machine\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$}]{machines\+Header }\end{DoxyParamCaption})}
+
+Tempo maximo de cada máquina em cada operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em machines\+Header} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em Max\+Time} & //\+Retorna o tempo maximo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_a7941b7b557a8a43acce219cdf994fe7a}\label{machines_8c_a7941b7b557a8a43acce219cdf994fe7a}} 
+\index{machines.c@{machines.c}!MinMachineTime@{MinMachineTime}}
+\index{MinMachineTime@{MinMachineTime}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{MinMachineTime()}{MinMachineTime()}}
+{\footnotesize\ttfamily int Min\+Machine\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$}]{machines\+Header }\end{DoxyParamCaption})}
+
+Tempo mínimo de cada máquina em cada operação 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em machines\+Header} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em Min\+Time} & //\+Retorna o tempo mínimo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_a317fceb69a44838806f918e387e7ad9c}\label{machines_8c_a317fceb69a44838806f918e387e7ad9c}} 
+\index{machines.c@{machines.c}!ShowMachineList@{ShowMachineList}}
+\index{ShowMachineList@{ShowMachineList}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{ShowMachineList()}{ShowMachineList()}}
+{\footnotesize\ttfamily void Show\+Machine\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine_list}{Machine\+List}} $\ast$}]{machines\+Header }\end{DoxyParamCaption})}
+
+Mostra todas as máquinas 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em machines\+Header} & \\
+\hline
+\end{DoxyParams}
